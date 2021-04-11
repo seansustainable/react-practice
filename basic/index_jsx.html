@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- React를 실행. -->
+    <!-- 주의: 사이트를 배포할 때는 "development.js"를 "production.min.js"로 대체하세요. -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        class LikeButton extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = { // 바뀌는 부분을 상태로!
+                    liked: false,
+                }
+            }
+            render() {
+                return <button onClick={() => {
+                    this.setState({ liked: true })
+                }}>{this.state.liked ? 'LIKED' : 'LIKE'}</button>; // <button>LIKE</button>
+            }
+        }
+    </script>
+    <script type="text/babel">
+        ReactDOM.render(<div><LikeButton /><LikeButton /><LikeButton /></div>, document.querySelector('#root')); // <div id="root"><button>LIKE</button></div>
+    </script>
+</body>
+
+</html>
