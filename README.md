@@ -9,5 +9,5 @@
 - /lotto : 로또 추첨 게임
 - /responseCheck : 반응 속도 게임
 - /tictactoe : 틱택토(삼목) 게임
-- /mineSearch : 지뢰찾기 게임
+- /minesearch : 지뢰찾기 게임
 - /react-router : 라우터로 모든 게임을 연결한 페이지 만들기
